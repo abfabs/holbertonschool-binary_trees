@@ -4,11 +4,11 @@
 
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-    if (node == NULL || node->parent == NULL || node->parent->parent = NULL)
+    if (node == NULL || node->parent == NULL || node->parent->parent == NULL)
         return (NULL);
 
-    if (node->parent->parent->n > node->parent)
-        return (node->parent->parent->left)
+    if (node->parent->n > node->parent->parent->n)
+        return (node->parent->parent->left);
     else
-        return (node)
+        return (node->parent->right);
 }
